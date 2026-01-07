@@ -1,9 +1,9 @@
-import { Header } from "./components/Header";
+import { Dashboard } from "./components/pages/Dashboard";
 
 export function App() {
   return (
     <>
-      <Header />
+      <Dashboard />
     </>
   );
 }
