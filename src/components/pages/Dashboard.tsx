@@ -1,5 +1,5 @@
 import { Layout } from "../layout/Layout";
-import { StatCard } from "../StatCard";
+import { StatCard } from "../ui/StatCard";
 
 export const Dashboard = () => {
   return (
