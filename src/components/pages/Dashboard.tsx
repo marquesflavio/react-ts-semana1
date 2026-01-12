@@ -1,10 +1,8 @@
 import { dashboardSummary } from "../../data/dashboard";
-import { Layout } from "../layout/Layout";
 import { StatCard } from "../ui/StatCard";
 
 export const Dashboard = () => {
   return (
-    <Layout>
       <div className="flex-col md:flex-row flex w-full gap-4 justify-between">
         <div className="flex gap-4 flex-col md:flex-row">
           <StatCard title="Ganhos" value={dashboardSummary.income} variant="positive" />
@@ -15,6 +13,5 @@ export const Dashboard = () => {
           <StatCard title="Saldo" value={dashboardSummary.totalBalance} />
         </div>
       </div>
-    </Layout>
   );
 };

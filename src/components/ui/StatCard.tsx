@@ -1,14 +1,9 @@
+import { formatToBRL } from "../../utils/formatToBRL";
+
 interface StatCardProps {
   title: string;
   value: number;
   variant?: "positive" | "negative" | "neutral";
-}
-
-function formatToBRL(value: number) {
-  return value.toLocaleString("pt-BR", {
-    style: "currency",
-    currency: "BRL",
-  });
 }
 
 export const StatCard = ({

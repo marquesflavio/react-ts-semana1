@@ -1,17 +1,14 @@
+import { Outlet } from "react-router-dom";
 import { Header } from "./Header";
 import { Sidebar } from "./Sidebar";
 
-export interface LayoutMainProps {
-  children: React.ReactNode;
-}
-
-export const Layout = ({ children }: LayoutMainProps) => {
+export const Layout = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <Header />
       <div className="flex flex-1">
         <Sidebar />
-        <main className="flex-1 p-6">{children}</main>
+        <main className="flex-1 p-6"><Outlet /></main>
       </div>
     </div>
   );

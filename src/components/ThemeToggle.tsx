@@ -6,7 +6,7 @@ export const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-full bg-gray-200 dark:bg-gray-700"
+      className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:cursor-pointer"
     >
       {theme === "dark" ? "☀️" : "🌙"}
     </button>
