@@ -1,13 +1,19 @@
+import { dashboardSummary } from "../../data/dashboard";
 import { Layout } from "../layout/Layout";
 import { StatCard } from "../ui/StatCard";
 
 export const Dashboard = () => {
   return (
     <Layout>
-      <div>
-        <StatCard title="Saldo" value={12345} />
-        <StatCard title="Ganhos" value={4500} variant="positive" />
-        <StatCard title="Despesas" value={2300} variant="negative" />
+      <div className="flex-col md:flex-row flex w-full gap-4 justify-between">
+        <div className="flex gap-4 flex-col md:flex-row">
+          <StatCard title="Ganhos" value={dashboardSummary.income} variant="positive" />
+          <StatCard title="Despesas" value={dashboardSummary.expenses} variant="negative" />
+          <StatCard title="Total do mês" value={dashboardSummary.monthResult} />
+        </div>
+        <div>
+          <StatCard title="Saldo" value={dashboardSummary.totalBalance} />
+        </div>
       </div>
     </Layout>
   );
