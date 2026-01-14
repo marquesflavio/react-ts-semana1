@@ -63,11 +63,3 @@ src/
 
 - Semana 3: testes de integração, arquitetura de hooks e services
 - Semana 4: começar backend .NET para integrar
-
-## Commits Semânticos
-
-- `feat: ...` nova feature
-- `fix: ...` correção
-- `chore: ...` infra/tooling
-- `docs: ...` documentação
-- `test: ...` testes

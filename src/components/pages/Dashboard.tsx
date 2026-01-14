@@ -1,3 +1,4 @@
+import { PiggyBank } from "lucide-react";
 import { dashboardSummary } from "../../data/dashboard";
 import { StatCard } from "../ui/StatCard";
 
@@ -10,7 +11,7 @@ export const Dashboard = () => {
           <StatCard title="Total do mês" value={dashboardSummary.monthResult} />
         </div>
         <div>
-          <StatCard title="Saldo" value={dashboardSummary.totalBalance} />
+          <StatCard icon={<PiggyBank />} title="Saldo" value={dashboardSummary.totalBalance} />
         </div>
       </div>
   );
