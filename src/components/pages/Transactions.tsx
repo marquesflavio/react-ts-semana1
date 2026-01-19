@@ -1,16 +1,22 @@
-import { transactions } from "../../data/transactions";
 import { EmptyState } from "../ui/EmptyState";
+import { Filter } from "../ui/Filter";
 import { TransactionItem } from "../ui/TransactionItem";
+import { useTransactions } from "../../hooks/useTransactions";
 
 export const Transactions = () => {
-  const transacoes = transactions;
-  const hasTransactions = transacoes.length > 0;
-
+  const { filter, setFilter, filterOptions, filteredTransactions } = useTransactions();
+  
   return (
     <div className="flex-col flex w-full gap-4 justify-between">
       <div className="flex gap-4 flex-col">
-        {hasTransactions ? (
-          transacoes.map((transacao) => (
+        <Filter
+          label={"Filtrar transação"}
+          value={filter}
+          options={filterOptions}
+          onChange={setFilter}
+        />
+        {filteredTransactions.length > 0 ? (
+          filteredTransactions.map((transacao) => (
             <TransactionItem
               key={transacao.id}
               amount={transacao.amount}
