@@ -1,13 +1,4 @@
-interface FilterOptions {
-  label: string;
-  value: string;
-}
-interface FilterProps {
-  label?: string | number;
-  value: string | number;
-  options: FilterOptions[];
-  onChange: (value: string) => void;
-}
+import type { FilterProps } from "../types/filter";
 
 export const Filter = ({ value, label, options, onChange }: FilterProps) => {
   return (

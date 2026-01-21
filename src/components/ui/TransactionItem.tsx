@@ -1,13 +1,6 @@
 import { formatDateToBRL } from "../../utils/formatDateToBRL";
 import { formatToBRL } from "../../utils/formatToBRL";
-
-export interface TransactionProps {
-  id: number;
-  date: Date;
-  description: string;
-  amount: number;
-  flow: "receita" | "despesa";
-}
+import type { TransactionProps } from "../types/transaction";
 
 export const TransactionItem = ({
   description,

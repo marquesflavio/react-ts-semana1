@@ -1,4 +1,4 @@
-import type { TransactionProps } from "../components/ui/TransactionItem";
+import type { TransactionProps } from "../components/types/transaction";
 
 export const transactions: TransactionProps[] = [
   { id: 1, date: new Date("2026-01-05"), description: "Salário", amount: 5000, flow: "receita" },

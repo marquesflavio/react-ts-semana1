@@ -15,10 +15,13 @@ export function useTransactions() {
         return transaction.flow === filter;
     });
 
+    const hasTransactionToShow = filteredTransactions.length > 0;
+
     return {
         filter,
         setFilter,
         filterOptions,
-        filteredTransactions
+        filteredTransactions,
+        hasTransactionToShow,
     }
 }
