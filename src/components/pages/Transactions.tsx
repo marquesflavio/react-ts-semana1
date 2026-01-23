@@ -33,7 +33,7 @@ export const Transactions = () => {
           ))
         ) : (
           <div className="m-auto flex flex-col items-center justify-center">
-            <EmptyState />
+            <EmptyState title="Nenhum dado encontrado" description="Ainda não há informações para exibir aqui." />
           </div>
         )}
       </div>
