@@ -1,7 +1,11 @@
 import { dashboardSummary } from "../../data/dashboard";
 import { transactions } from "../../data/transactions";
+import { formatToBRL } from "../../utils/formatToBRL";
 import { EmptyState } from "../ui/EmptyState";
-import { StatCard } from "../ui/StatCard";
+import { StatCard } from "../ui/StatCard/StatCard";
+import { StatCardHeader } from "../ui/StatCard/StatCard.Header";
+import { StatCardTitle } from "../ui/StatCard/StatCard.Title";
+import { StatCardValue } from "../ui/StatCard/StatCard.Value";
 
 export const Reports = () => {
   const hasTransactionToShow = transactions.length > 0;
@@ -18,9 +22,35 @@ export const Reports = () => {
       </header>
 
       <section className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <StatCard title="Income" value={dashboardSummary.income} variant="positive" />
-        <StatCard title="Expense"value={dashboardSummary.expenses} variant="negative" />
-        <StatCard title="Balance" value={dashboardSummary.monthResult}/>
+        <StatCard>
+          <StatCardHeader>
+            <StatCardTitle>Income</StatCardTitle>
+          </StatCardHeader>
+
+          <StatCardValue variant="positive">
+            {formatToBRL(dashboardSummary.income)}
+          </StatCardValue>
+        </StatCard>
+
+        <StatCard>
+          <StatCardHeader>
+            <StatCardTitle>Expense</StatCardTitle>
+          </StatCardHeader>
+
+          <StatCardValue variant="negative">
+            {formatToBRL(dashboardSummary.expenses)}
+          </StatCardValue>
+        </StatCard>
+
+        <StatCard>
+          <StatCardHeader>
+            <StatCardTitle>Balance</StatCardTitle>
+          </StatCardHeader>
+
+          <StatCardValue>
+            {formatToBRL(dashboardSummary.monthResult)}
+          </StatCardValue>
+        </StatCard>
       </section>
 
       <section className="flex flex-col gap-4">

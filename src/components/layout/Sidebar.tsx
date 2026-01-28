@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { ROUTES } from "../../routes/routes";
+import { ROUTES_MENU } from "../../routes/routes";
 
 export const Sidebar = () => {
   return (
@@ -7,31 +7,17 @@ export const Sidebar = () => {
       <h1 className="text-xl font-bold mb-6">FinanceDash</h1>
 
       <nav className="flex flex-col gap-2">
-        <NavLink to={ROUTES.DASHBOARD}>
+        {ROUTES_MENU.map((menu) => {
+          return (
+            <NavLink to={menu.route} key={menu.route}>
           <div className="flex items-center gap-2 p-2 rounded hover:bg-gray-700 cursor-pointer">
-            📊 <span>Dashboard</span>
+            <span>{menu.icon}</span> 
+            <span>{menu.name}</span>
           </div>
         </NavLink>
-        <NavLink to={ROUTES.TRANSACTIONS}>
-          <div className="flex items-center gap-2 p-2 rounded hover:bg-gray-700 cursor-pointer">
-            💸 <span>Transactions</span>
-          </div>
-        </NavLink>
-        <NavLink to={ROUTES.CATEGORIES}>
-          <div className="flex items-center gap-2 p-2 rounded hover:bg-gray-700 cursor-pointer">
-            🏷️ <span>Categories</span>
-          </div>
-        </NavLink>
-        <NavLink to={ROUTES.REPORTS}>
-          <div className="flex items-center gap-2 p-2 rounded hover:bg-gray-700 cursor-pointer">
-            📈 <span>Reports</span>
-          </div>
-        </NavLink>
-        <NavLink to={ROUTES.SETTINGS}>
-          <div className="flex items-center gap-2 p-2 mt-auto rounded hover:bg-gray-700 cursor-pointer">
-            ⚙️ <span>Settings</span>
-          </div>
-        </NavLink>
+          )
+        })}
+        
       </nav>
     </aside>
   );
