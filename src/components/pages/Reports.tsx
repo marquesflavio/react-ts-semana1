@@ -2,10 +2,12 @@ import { dashboardSummary } from "../../data/dashboard";
 import { transactions } from "../../data/transactions";
 import { formatToBRL } from "../../utils/formatToBRL";
 import { EmptyState } from "../ui/EmptyState";
-import { StatCard } from "../ui/StatCard/StatCard";
-import { StatCardHeader } from "../ui/StatCard/StatCard.Header";
-import { StatCardTitle } from "../ui/StatCard/StatCard.Title";
-import { StatCardValue } from "../ui/StatCard/StatCard.Value";
+import { 
+  StatCard, 
+  StatCardHeader,
+  StatCardTitle,
+  StatCardValue 
+} from "../ui/StatCard";
 
 export const Reports = () => {
   const hasTransactionToShow = transactions.length > 0;

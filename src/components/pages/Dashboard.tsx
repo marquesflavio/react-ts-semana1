@@ -1,13 +1,14 @@
 import { PiggyBank } from "lucide-react";
 import { dashboardSummary } from "../../data/dashboard";
 import { formatToBRL } from "../../utils/formatToBRL";
-import { StatCard } from "../ui/StatCard/StatCard";
-import { StatCardHeader } from "../ui/StatCard/StatCard.Header";
-import { StatCardTitle } from "../ui/StatCard/StatCard.Title";
-import { StatCardValue } from "../ui/StatCard/StatCard.Value";
-import { StatCardDescription } from "../ui/StatCard/StatCard.Description";
-import { StatCardIcon } from "../ui/StatCard/StatCard.Icon";
-
+import { 
+  StatCard,
+  StatCardHeader,
+  StatCardTitle,
+  StatCardValue,
+  StatCardDescription,
+  StatCardIcon, 
+} from "../ui/StatCard"
 
 export const Dashboard = () => {
   return (
@@ -48,7 +49,7 @@ export const Dashboard = () => {
             </StatCardHeader>
 
             <StatCardValue variant="neutral">
-              {formatToBRL(dashboardSummary.expenses)}
+              {formatToBRL(dashboardSummary.monthResult)}
             </StatCardValue>
 
             <StatCardDescription>
