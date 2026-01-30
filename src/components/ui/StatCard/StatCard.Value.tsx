@@ -1,3 +1,5 @@
+import * as React from "react";
+
 interface StatCardValueProps {
   children: React.ReactNode;
   variant?: "positive" | "negative" | "neutral";

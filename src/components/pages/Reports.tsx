@@ -2,6 +2,7 @@ import { dashboardSummary } from "../../data/dashboard";
 import { transactions } from "../../data/transactions";
 import { formatToBRL } from "../../utils/formatToBRL";
 import { EmptyState } from "../ui/EmptyState";
+import { ExpensesByCategoryChart } from "../ui/Reports/ExpensesByCategoryChart";
 import { 
   StatCard, 
   StatCardHeader,
@@ -57,10 +58,8 @@ export const Reports = () => {
 
       <section className="flex flex-col gap-4">
         {hasTransactionToShow ? (
-          <div className="h-64 rounded-lg border border-dashed border-zinc-300 dark:border-zinc-700 flex items-center justify-center">
-            <span className="text-sm text-zinc-500">
-              Chart placeholder
-            </span>
+          <div>
+              <ExpensesByCategoryChart />
           </div>
         ) : (
           <EmptyState

@@ -1,3 +1,5 @@
+import * as React from "react";
+
 interface StatCardTitleProps {
   children: React.ReactNode;
 }
