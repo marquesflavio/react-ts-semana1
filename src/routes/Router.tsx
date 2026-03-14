@@ -4,6 +4,7 @@ import { Transactions } from "../components/pages/Transactions"
 import { Layout } from "../components/layout/Layout"
 import { ROUTES } from "./routes"
 import { Reports } from "../components/pages/Reports"
+import { Users } from "../components/pages/Users"
 
 export const Router = () => {
 
@@ -13,6 +14,7 @@ export const Router = () => {
         <Route index element={<Dashboard />} />
         <Route path={ROUTES.TRANSACTIONS} element={<Transactions />} />
         <Route path={ROUTES.REPORTS} element={<Reports />} />
+        <Route path={ROUTES.USERS} element={<Users />} />
       </Route>
     </Routes>
   )
